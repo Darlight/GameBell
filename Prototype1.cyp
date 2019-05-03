@@ -24,12 +24,12 @@ CREATE
 	(Fernando)-[:LIKES]->(Action),
 	(Alicia)-[:PLAYS_WITH]->(Computer),
 	(Alicia)-[:LIKES]->(Strategy),
-	(Alicia)-[:LIKES]->(Action)
+	(Alicia)-[:LIKES]->(Action),
 	(Mario)-[:PLAYS_WITH]->(Console),
 	(Mario)-[:LIKES]->(Shooter),
 	(Pete)-[:PLAYS_WITH]->(Console),
 	(Pete)-[:LIKES]->(Strategy),
-	(Pete)-[:LIKES]->(Action)
+	(Pete)-[:LIKES]->(Action),
 	(Michelle)-[:PLAYS_WITH]->(Smartphone),
 	(Michelle)-[:LIKES]->(Platform),
 	(Bethany)-[:PLAYS_WITH]->(Console),
