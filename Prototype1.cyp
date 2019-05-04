@@ -14,10 +14,11 @@ CREATE (Strategy:Genre{title:"Strategy" })
 CREATE (Shooter:Genre{title:"Shooter" })
 CREATE (Platform:Genre{title:"Platform" })
 
-CREATE (Warcraft:Game{title:"Warcarft" })
-CREATE (Uncharted:Game{title:"Uncharted 4" })
-CREATE (Halo:Game{title:"Halo 5" })
-CREATE (Supermario:Game{title:"Super Mario Odyssey" })
+CREATE (Warcraft:Game{title:"Warcarft", company: "Blizzard" })
+CREATE (Uncharted:Game{title:"Uncharted 4", company: "Naughty Dog" })
+CREATE (Halo:Game{title:"Halo 5", company: "343 Industries" })
+CREATE (Supermario:Game{title:" Super Mario Odyssey", company: "Nintendo "})
+
 
 CREATE
 	(Fernando)-[:PLAYS_WITH]->(Computer),

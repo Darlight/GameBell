@@ -1,0 +1,12 @@
+Pseudocodigo
+	Si es nuevo el usuario:
+		Ofrecer manera de registrarse a GameBell.
+		Pedir datos y permisos para registrarse.
+		Entrar al main board
+	De lo contrario:
+		Iniciar sesión
+		Entrar al main board
+	El usuario tendrá posibles recomendaciones estándar sin haber elegido preferencias de género.
+	Si elige preferencias:
+		Se mostrará más juegos con los tags seleccionados junto su precio y sistema.
+		
