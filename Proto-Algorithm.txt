@@ -2,11 +2,29 @@ Pseudocodigo
 	Si es nuevo el usuario:
 		Ofrecer manera de registrarse a GameBell.
 		Pedir datos y permisos para registrarse.
-		Entrar al main board
+		<Next>
 	De lo contrario:
 		Iniciar sesión
-		Entrar al main board
+			si no es válida la sesión:
+				Ofrecer el registro
+				Programación defensiva
+			Si sí:
+				Entrar al main board
+				<Next>
 	El usuario tendrá posibles recomendaciones estándar sin haber elegido preferencias de género.
 	Si elige preferencias:
 		Se mostrará más juegos con los tags seleccionados junto su precio y sistema.
-		
+			Los primeros juegos se basan en los géneros más populares
+	Si ocurre selección:
+		CHECK qué tantas veces es accedido un género
+			Sí se accede muchas veces:
+				Mostrar más de ese género
+			No se accede muchas veces:
+				CHECK empresa
+					CHECK veces accedida:
+						Sí es accedida constantemente:
+							Mostrar juegos de compañía
+						No es accedida constamente:
+							NADA
+	CHANGE imágenes mostradas y juegos. 
+		RESET ALGORITHM
