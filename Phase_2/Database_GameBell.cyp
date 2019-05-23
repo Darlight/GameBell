@@ -55,9 +55,10 @@ CREATE (NS: System{name: "Nintendo Switch"})
 CREATE (WII: System{name: "Nintendo Wii"})
 CREATE (SP: System{name: "SmartPhone"})
 
-CREATE (Warcraft:Game{title:"Warcarft III", price: 19.99, rating: 5, company:"Blizzard" })
+CREATE (Warcraft3:Game{title:"Warcarft III", price: 19.99, rating: 5, company:"Blizzard" })
+CREATE (Warcraft2:Game{title:"Warcarft II", price: 19.99, rating: 4, company:"Blizzard" })
 CREATE (Minecraft:Game{title:"Minecraft", price: 9.99, rating: 5, company:"Microsoft" })
-CREATE (SMR:Game{title:"Super Mario Run", price: 9.99, rating: 4.5, company: "Nintendo" })
+CREATE (SM_R:Game{title:"Super Mario Run", price: 9.99, rating: 4.5, company: "Nintendo" })
 CREATE (CR:Game{title:"Clash Royale", price: 0, rating: 5, company:"SuperCell" })
 CREATE (COC:Game{title:"Clash of Clans", price: 0, rating: 4, company:"SuperCell" })
 CREATE (FIFA:Game{title:"FIFA 19", price: 39.99, rating: 5, company:"Electronic Arts" })
@@ -70,6 +71,13 @@ CREATE (SONIC:Game{title:"Sonic", price: 5.99, rating: 2.5, company:"SEGA" })
 CREATE (RE:Game{title:"Resident Evil", price: 19.99, rating: 3, company:"Capcom" })
 CREATE (Naruto:Game{title:"Naurto: Ultimate Ninja", price: 14.99, rating: 4, company:"Bandai Namco" })
 CREATE (AC:Game{title:"Assassins Creed", price: 29.99, rating: 5, company:"Gameloft" })
+CREATE (FFXIV:Game{title:"Final Fantasy XIV", price: 59.99, rating: 5, company:"Square Enix" })
+CREATE (KH:Game{title:"Kingdom Hearts 3", price: 39.99, rating: 5, company:"Square Enix" })
+CREATE (LOZ_BOW:Game{title:"The Legend of Zelda: Breath of the Wild", price: 29.99, rating: 5, company:"Nintendo" })
+CREATE (LOZ_OOT:Game{title:"The Legend of Zelda: Ocarina of Time", price: 14.99, rating: 5, company:"Nintendo" })
+CREATE (LOZ_MM:Game{title:"The Legend of Zelda: Majoras Mask", price: 14.99, rating: 5, company:"Nintendo" })
+CREATE (LOZ_TP:Game{title:"The Legend of Zelda: Twilight Princess", price: 9.99, rating: 4, company:"Nintendo" })
+
 
 
 
