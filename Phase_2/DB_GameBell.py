@@ -9,34 +9,28 @@ from neo4jrestclient import client
 
 class DB_GameBell(object):
 
-    def __init__(self, uri, user, password):
+    def __init__(self):
         # Uses the database with the username called ne04j, the database link and the password
         # Link is
         # Password is 12345.
-        self._driver = GraphDatabase.driver(uri, auth=(user, password))
+        self._driver = GraphDatabase.driver("http://localhost:7687", auth =("neo4j", "12345"))
         # Creates the nodes of the patient, doctor and the drug required.
-        self.persona = self._driver.lavels.create("Doctor")
-        self.patient = self._driver.lavels.create("Patient")
-        self.drug = self._driver.lavels.create("Drug")
+        self.person = self._driver.labels.create("Person")
+        self.game = self._driver.labels.create("Game")
+        self.genre = self._driver.labels.create("Genre")
+        self.company = self._driver.labels.create("Company")
 
     def close(self):
         # Just closes the driver
         self._driver.close()
 
-    def add_Patient(self, name, tel):
+    def add_Person(self, name, age, email, password): #nombre, edad, email, y contrasela
         # Creating a Patient node with its atributes
-        self.patient.add(self._driver.nodes.create(name=name, telephone=tel))
-        return "Done creating a new patient. \n"
+        self.person.add(self._driver.nodes.create(name=name, age= age , email = email, password = password))
+        return "Done creating a new username in the database. \n"
 
-    def add_Doctor(self, name, tel, spec, colegiado):
-        # Creating a Doctor node with its atributes
-        self.doctor.add(self._driver.nodes.create(name=name, telephone=tel, scholarship=colegiado, specialty=spec))
-        return "Done creating a new doctor. \n"
-
-    def add_Drug(self, name, date1, date2, dose):
-        # Creating a Drug node with its atributes
-        self.drug.add(self._driver.nodes.create(name=name, dateassigned=date1, untildate=date2, dose=dose))
-
+    def
+    """
     def add_visit(patient, doctor, drug, dose):
         date1 = datetime.now()
         date1s = "{:%Y-%m-#d}".format(date1)
@@ -47,6 +41,7 @@ class DB_GameBell(object):
         add_PatientDrugConnection(patient, drug)
         add_DoctorDrugConnection(doctor, drug)
         return True
+"""
 """
     def add_PatientDoctorConnetion(self, patientName, doctorName):
         q = "MATCH (p:Patient), (d:Doctor) WHERE p.name = \"{0}\" AND d.name = \"{0}\" RETURN p,d".format(patientName,
