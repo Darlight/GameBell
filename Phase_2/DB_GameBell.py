@@ -14,7 +14,7 @@ class DB_GameBell(object):
         # Link is
         # Password is 12345.
         self._driver = GraphDatabase.driver("http://localhost:7687", auth =("neo4j", "12345"))
-        # Creates the nodes of the patient, doctor and the drug required.
+        # Creates label of nodes.
         self.person = self._driver.labels.create("Person")
         self.game = self._driver.labels.create("Game")
         self.genre = self._driver.labels.create("Genre")
@@ -28,20 +28,29 @@ class DB_GameBell(object):
         # Creating a Patient node with its atributes
         self.person.add(self._driver.nodes.create(name=name, age= age , email = email, password = password))
         return "Done creating a new username in the database. \n"
+    def delete_Person(self, name):
+        result = "MATCH " #Need to learn
 
-    def
-    """
-    def add_visit(patient, doctor, drug, dose):
-        date1 = datetime.now()
-        date1s = "{:%Y-%m-#d}".format(date1)
-        date2 = datetime.now() + timedelta(month=1)
-        date2s = "{:%Y-%m-#d}".format(date2)
-        add_Drug(drug, date1s, date2s, dose)
-        add_PatientDoctorConnection(patient, doctor)
-        add_PatientDrugConnection(patient, drug)
-        add_DoctorDrugConnection(doctor, drug)
-        return True
-"""
+    #Creates a connection with another data user.
+    def add_PersonConnection(self,name1,name2):
+        name1.relationships.create("KNOWS",name2)
+        return "Database has been updated"
+    def change_Password(self,new_password,name):
+        
+        q = "MATCH (p:Person WHERE p.name = \"{0}\" AND p.password = \"{3}\" + RETURN p".format(name,new_password) + "SET p.password = "
+    #Grabs all the games and shows to the user
+    def get_AllGame(self):
+        games = []
+        q = "MATCH (game:Game) WHERE game.name = \"{0}\" RETURN game"
+        results = self._driver.query(q, returns=(client.node))
+        for node in results:
+            games.append(node[0]["name"])
+        return games
+
+    def game_Recommendation(self):
+        return "hello"
+
+
 """
     def add_PatientDoctorConnetion(self, patientName, doctorName):
         q = "MATCH (p:Patient), (d:Doctor) WHERE p.name = \"{0}\" AND d.name = \"{0}\" RETURN p,d".format(patientName,
