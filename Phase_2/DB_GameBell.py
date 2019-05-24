@@ -7,30 +7,30 @@ DB_GameBell
 from neo4jrestclient.client import GraphDatabase
 from neo4jrestclient import client
 
-def add_Person(name,age,email,password, db):
+def add_User(db, name, age, email, password):
     Person = db.nodes.create(name=name, age = age, email = email, password = password)
     Person.labels.add("User")
     print ("\nUser has been registered succesfully.\n")
-def add_Game(title, price, rating,db):
+def add_Game(db, title, price, rating):
     Game = db.nodes.create(title=title,price= price, rating=rating)
     Game.labels.add("Game")
     print("\nGame has been registered succesfully.\n")
 def create_PersonConnection(user1,user2):
     user1.relationships.create("KNOWS",user2)
     return "Database has been updated. \n"
-def check_Prices(price,game,db):
+def check_Prices(db, price, client):
     q = "Match(g:Game) WHERE g.price=" +price+" \n RETURN g"
-    result = db.query(q,returns=(game.Node,str,client.Node))
+    result = db.query(q,returns=(client.Node,float,client.Node))
     for game in result:
         print(game[0]["title"])
     return game
-def check_Rating(rating,game,db):
+def check_Rating(db, rating,game):
     q = 'MATCH (g:Game) WHERE g.rating="' + rating + '" RETURN g'
     result = db.query(q, returns=(client.Node, str, client.Node))
     for r in result:
         print(r[0]['name'])
     return game
-def recommend (price,rating,db):
+def recommendGame(db, price,rating):
     q = 'MATCH (g:Game) WHERE g.price="'+price+'" RETURN g'
     result = db.query(q, returns=(client.Node, str, client.Node))
     games = []
