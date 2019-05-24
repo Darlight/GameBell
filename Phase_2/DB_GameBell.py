@@ -19,26 +19,26 @@ def create_PersonConnection(user1,user2):
     user1.relationships.create("KNOWS",user2)
     return "Database has been updated. \n"
 def check_Prices(db, price, client):
-    q = "Match(g:Game) WHERE g.price=" +price+" \n RETURN g"
+    q = "Match(g: Game) WHERE g.price=" +price+" \n RETURN g"
     result = db.query(q,returns=(client.Node,float,client.Node))
     for game in result:
         print(game[0]["title"])
     return game
-def check_Rating(db, rating,game):
-    q = 'MATCH (g:Game) WHERE g.rating="' + rating + '" RETURN g'
+def check_Rating(db, rating, game):
+    q = 'MATCH (g: Game) WHERE g.rating="' + rating + '" RETURN g'
     result = db.query(q, returns=(client.Node, str, client.Node))
     for r in result:
         print(r[0]['name'])
     return game
-def recommendGame(db, price,rating):
-    q = 'MATCH (g:Game) WHERE g.price="'+price+'" RETURN g'
+def recommendGame(db, price, rating):
+    q = 'MATCH (g: Game) WHERE g.price="'+price+'" RETURN g'
     result = db.query(q, returns=(client.Node, str, client.Node))
     games = []
     for game in result:
     	if games.count(game)<1:
     		games.append(game)
 
-    q = 'MATCH (g:Game) WHERE g.rating="'+rating+'" RETURN g'
+    q = 'MATCH (g: Game) WHERE g.rating="'+rating+'" RETURN g'
     result = db.query(q, returns=(client.Node, str, client.Node))
     for game in result:
     	if games.count(game)<1:
