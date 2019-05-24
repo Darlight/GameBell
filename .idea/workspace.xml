@@ -3,10 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="dd2f3195-7e5a-42cb-a627-f5851915b545" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Phase_2/DB_GameBell.py" beforeDir="false" afterPath="$PROJECT_DIR$/Phase_2/DB_GameBell.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Phase_2/MainFile.py" beforeDir="false" afterPath="$PROJECT_DIR$/Phase_2/MainFile.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Phase_2/functions.py" beforeDir="false" afterPath="$PROJECT_DIR$/Phase_2/functions.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Phase_2/Database_GameBell.cyp" beforeDir="false" afterPath="$PROJECT_DIR$/Phase_2/Database_GameBell.cyp" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -19,8 +16,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Phase_2/DB_GameBell.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1411">
-              <caret line="83" column="70" selection-start-line="83" selection-start-column="70" selection-end-line="83" selection-end-column="70" />
+            <state relative-caret-position="323">
+              <caret line="19" column="40" lean-forward="true" selection-start-line="19" selection-start-column="40" selection-end-line="19" selection-end-column="40" />
               <folding>
                 <element signature="e#65#113#0" expanded="true" />
               </folding>
@@ -28,23 +25,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Phase_2/Database_GameBell.cyp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3281">
-              <caret line="193" column="57" lean-forward="true" selection-start-line="193" selection-start-column="57" selection-end-line="193" selection-end-column="57" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/README.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="SPLIT">
-              <first_editor relative-caret-position="204">
-                <caret line="12" column="212" lean-forward="true" selection-start-line="12" selection-start-column="212" selection-end-line="12" selection-end-column="212" />
-              </first_editor>
-              <second_editor />
+            <state relative-caret-position="1241">
+              <caret line="194" column="65" lean-forward="true" selection-start-line="194" selection-start-column="65" selection-end-line="194" selection-end-column="65" />
             </state>
           </provider>
         </entry>
@@ -52,38 +37,11 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Phase_2/mainGameBell.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="8" column="6" selection-start-line="8" selection-start-column="6" selection-end-line="8" selection-end-column="6" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Phase_2/tempMain.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="3" selection-start-column="3" selection-end-column="3" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Phase_2/MainFile.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1343">
-              <caret line="79" column="30" selection-start-line="79" selection-start-column="30" selection-end-line="79" selection-end-column="30" />
+            <state relative-caret-position="34">
+              <caret line="2" column="4" lean-forward="true" selection-start-line="2" selection-start-column="4" selection-end-line="2" selection-end-column="4" />
               <folding>
-                <element signature="e#44#92#0" expanded="true" />
+                <element signature="e#107#117#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Phase_2/functions.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="23" selection-start-column="17" selection-end-column="23" />
             </state>
           </provider>
         </entry>
@@ -105,15 +63,14 @@
       <list>
         <option value="$PROJECT_DIR$/Phase_2/__init__.py" />
         <option value="$PROJECT_DIR$/Phase_2/mainGameBell.py" />
-        <option value="$PROJECT_DIR$/Phase_2/Database_GameBell.cyp" />
-        <option value="$PROJECT_DIR$/Phase_2/functions.py" />
-        <option value="$PROJECT_DIR$/Phase_2/MainFile.py" />
         <option value="$PROJECT_DIR$/Phase_2/DB_GameBell.py" />
-        <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/Phase_2/Database_GameBell.cyp" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="-9" />
+    <option name="y" value="-9" />
     <option name="width" value="1024" />
     <option name="height" value="1104" />
   </component>
@@ -170,25 +127,25 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1558573257974</updated>
-      <workItem from="1558573260570" duration="25688000" />
+      <workItem from="1558573260570" duration="23581000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="25688000" />
+    <option name="totallyTimeSpent" value="23581000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1653" height="898" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Favorites" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.018832391" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.16996047" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" />
       <window_info anchor="bottom" id="Version Control" />
       <window_info anchor="bottom" id="Python Console" />
-      <window_info anchor="bottom" id="Terminal" visible="true" weight="0.3224543" />
+      <window_info active="true" anchor="bottom" id="Terminal" visible="true" weight="0.3224543" />
       <window_info anchor="bottom" id="Event Log" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
@@ -231,61 +188,30 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Phase_2/Database_GameBell.cyp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3281">
-          <caret line="193" column="57" lean-forward="true" selection-start-line="193" selection-start-column="57" selection-end-line="193" selection-end-column="57" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Phase_2/tempMain.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="3" selection-start-column="3" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Phase_2/mainGameBell.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="6" selection-start-line="8" selection-start-column="6" selection-end-line="8" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Phase_2/functions.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="23" selection-start-column="17" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Phase_2/MainFile.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1343">
-          <caret line="79" column="30" selection-start-line="79" selection-start-column="30" selection-end-line="79" selection-end-column="30" />
+        <state relative-caret-position="34">
+          <caret line="2" column="4" lean-forward="true" selection-start-line="2" selection-start-column="4" selection-end-line="2" selection-end-column="4" />
           <folding>
-            <element signature="e#44#92#0" expanded="true" />
+            <element signature="e#107#117#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Phase_2/DB_GameBell.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1411">
-          <caret line="83" column="70" selection-start-line="83" selection-start-column="70" selection-end-line="83" selection-end-column="70" />
+        <state relative-caret-position="323">
+          <caret line="19" column="40" lean-forward="true" selection-start-line="19" selection-start-column="40" selection-end-line="19" selection-end-column="40" />
           <folding>
             <element signature="e#65#113#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="204">
-            <caret line="12" column="212" lean-forward="true" selection-start-line="12" selection-start-column="212" selection-end-line="12" selection-end-column="212" />
-          </first_editor>
-          <second_editor />
+    <entry file="file://$PROJECT_DIR$/Phase_2/Database_GameBell.cyp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1241">
+          <caret line="194" column="65" lean-forward="true" selection-start-line="194" selection-start-column="65" selection-end-line="194" selection-end-column="65" />
         </state>
       </provider>
     </entry>
