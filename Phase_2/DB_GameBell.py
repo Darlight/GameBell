@@ -7,6 +7,7 @@ DB_GameBell
 from neo4jrestclient.client import GraphDatabase
 from neo4jrestclient import client
 
+#Adds a user to the database. To do this, it needs the basic information
 def add_User(db, name, age, email, password):
     Person = db.nodes.create(name=name, age = age, email = email, password = password)
     try:
@@ -14,6 +15,7 @@ def add_User(db, name, age, email, password):
     	print ("\nUser has been registered succesfully.\n")
     except Exception:
     	print("\nUser could not be added.\n")
+#Adds a game to the database. It needs the basic attributes.
 def add_Game(db, title, price, rating):
     Game = db.nodes.create(title=title,price= price, rating=rating)
     try:
@@ -21,6 +23,7 @@ def add_Game(db, title, price, rating):
     	print("\nGame has been registered succesfully.\n")
     except Exception:
     	print("\nGame could not be added.")
+#Creates connections between people
 def create_PersonConnection(user1,user2):
     try:
     	user1.relationships.create("KNOWS",user2)
@@ -29,6 +32,7 @@ def create_PersonConnection(user1,user2):
     	print("\n\n---------------------------------------------------------")
     	print("-------------Couldn't add user to the Database------------")
     	print("----------------------------------------------------------")
+#Checks the prices and releases a list of them
 def check_Prices(db, price, client):
     q = "Match(g: Game) WHERE g.price=" +price+" \n RETURN g"
     result = db.query(q,returns=(client.Node,float,client.Node))
@@ -40,6 +44,7 @@ def check_Prices(db, price, client):
     	print("\n\n---------------------------------------------------------")
     	print("----------Couldn't find games under such Price----------")
     	print("----------------------------------------------------------")
+#Gets usernames to be used in login systems
 def get_User(db, username, client):
 	users = []
 	q = 'MATCH(p: Person) WHERE p.name="'+username+'" RETURN p'
@@ -59,7 +64,7 @@ def get_User(db, username, client):
 		return True
 	
 	
-
+#Checks the rating and releases a list based off of what it's found
 def check_Rating(db, rating, client):
     q = 'MATCH (g: Game) WHERE g.rating="' + rating + '" RETURN g'
     result = db.query(q, returns=(client.Node, str, client.Node))
@@ -71,7 +76,7 @@ def check_Rating(db, rating, client):
     	print("\n\n---------------------------------------------------------")
     	print("----------Couldn't find games under such rating----------")
     	print("----------------------------------------------------------")
-
+#Recommends games
 def recommendGame(db, price, rating):
     q = 'MATCH (g: Game) WHERE g.price="'+price+'" RETURN g'
     result = db.query(q, returns=(client.Node, str, client.Node))

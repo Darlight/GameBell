@@ -8,8 +8,8 @@ mainGameBell.py
 
 import sys
 from time import sleep
-
-
+print("You're supposed to open MainFile.py")
+'''
 database_file_input = input("Please declare the file where the usernames and passwords will be saved upon.")
 database_Login = open(str(database_file_input) + ".txt", 'w')
 user_Database = database()
@@ -91,3 +91,4 @@ while status_pr is True:
 			break
 	elif option == '5':
 		print("")
+		'''
