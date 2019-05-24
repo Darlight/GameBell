@@ -53,7 +53,7 @@ CREATE (JPJ:Game{title:"JetPack Joyride", price: "0", rating: "3" })
 CREATE (Minecraft:Game{title:"Minecraft", price: "9.99", rating: "5" })
 CREATE (CR:Game{title:"Clash Royale", price: "0", rating: "5" })
 CREATE (COC:Game{title:"Clash of Clans", price: "0", rating: "4" })
-CREATE (BS:Game{title:"Brawl Stars", price "0", rating "4"})
+CREATE (BS:Game{title:"Brawl Stars", price: "0", rating: "4"})
 CREATE (FIFA:Game{title:"FIFA 19", price: "39.99", rating: "5" })
 CREATE (GTA:Game{title:"Grand Theft Auto", price: "59.99", rating: "5"})
 CREATE (WD:Game{title:"Watch Dogs", price: "29.99", rating: "3" })
@@ -70,7 +70,7 @@ CREATE (LOZ_MM:Game{title:"The Legend of Zelda: Majoras Mask", price: "14.99", r
 CREATE (LOZ_TP:Game{title:"The Legend of Zelda: Twilight Princess", price: "9.99", rating: "4" })
 CREATE (SM_K8:Game{title:"Mario Kart 8 Deluxe", price: "24.99", rating: "5" })
 CREATE (SM_K64:Game{title:"Mario Kart 64", price: "4.99", rating: "5" })
-CREATE (N_SM:Game{title:""New Super Mario Bros, price: "14.99", rating: "4" })
+CREATE (N_SM:Game{title:"New Super Mario Bros", price: "14.99", rating: "4" })
 CREATE (SM_O:Game{title:"Super Mario Odyssey", price: "44.99", rating: "5" })
 CREATE (SM_M:Game{title:"Super Mario Maker", price: "16.99", rating: "4" })
 CREATE (SM_M2:Game{title:"Super Mario Maker2", price: "23.99", rating: "4" })
@@ -156,7 +156,6 @@ CREATE (Injustice2:Game{title:"Injustice 2", price: "48.99", rating: "5"})
 CREATE (MKX:Game{title:"Mortal Kombat X", price: "45.99", rating: "5"})
 CREATE (Injustice_GAU:Game{title:"Injustice: Gods Among Us", price: "22.99", rating: "4"})
 CREATE (BACL:Game{title:"Batman Arkham City Lockdown", price: "16.99", rating: "3"})
-CREATE (LIS:Game{title:"Linger in shadows", price: "37.99", rating: "5"})
 CREATE (Dauntless:Game{title:"Dauntless", price: "0", rating: "2"})
 CREATE (Observation:Game{title:"Observation", price: "8.99", rating: "5"})
 CREATE (OW:Game{title:"Outer Wilds", price: "9.99", rating: "4"})
@@ -302,7 +301,7 @@ CREATE
 	(MC2)-[:CREATED_BY]->(Gameloft),
 	(TASM1)-[:CREATED_BY]->(Gameloft),
 	(TASM2)-[:CREATED_BY]->(Gameloft),
-	(TASM3-[:CREATED_BY]->(Gameloft),
+	(TASM3)-[:CREATED_BY]->(Gameloft),
 	(AC)-[:CREATED_BY]->(Ubisoft),
 	(WD)-[:CREATED_BY]->(Ubisoft),
 	(JD)-[:CREATED_BY]->(Ubisoft),
@@ -549,4 +548,4 @@ CREATE
 	(Shooter)-[:RECOMMENDATION]->(JC4),
 	(Shooter)-[:RECOMMENDATION]->(LA),
 	(Shooter)-[:RECOMMENDATION]->(Anthem),
-	(Shooter)-[:RECOMMENDATION]->(HU),
+	(Shooter)-[:RECOMMENDATION]->(HU)

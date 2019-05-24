@@ -49,7 +49,7 @@ j4.relationships.create("Platformer", j6)
 status = True
 
 while status:
-	print("Please choose an option from the following: \n\n1. Add a new user. \n2. Add a new game \n3. Find games by price \n4. Find games by genre \n5. Recommend games \n6. Exit the program")
+	print("Please choose an option from the following: \n\n1. Add a new user. \n2. Add a new game \n3. Find games by price \n4. Find games by Rating \n5. Recommend games \n6. Exit the program")
 	option = input(">>> ")
 
 	if option == '1':
@@ -64,16 +64,8 @@ while status:
 		rating = input("Add a rating: \n>>> ")
 		add_Game(db, title, price, rating)
 	elif option == '3':
-		print("Not implemented yet")
-		"""x = True
-		while x:
-			price = input("Please input a price range (Under10/ FullPrice): \n>>> ")
-			if price.upper() == 'UNDER10' or price.upper() == 'FULLPRICE':
-				data_to_print = check_Prices(db, price, client)
-				print(data_to_print)
-				x = False
-			else:
-				print("Please try again")"""
+		price = str(input("Please, input a price \n>>> "))
+		check_Prices(db, price, client)
 	elif option == '4':
 		rating = input("What rating do you wish to have? (1 - 5) \n>>> ")
 		check_Rating(db, rating, client)
