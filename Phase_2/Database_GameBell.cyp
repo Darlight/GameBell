@@ -963,4 +963,5 @@ CREATE
 	(Adventure)-[:RECOMMENDATION]->(PSw),
 	(Adventure)-[:RECOMMENDATION]->(PSh),
 	(Adventure)-[:RECOMMENDATION]->(ClMe),
-	(Adventure)-[:RECOMMENDATION]->(Pulseman)
+	(Adventure)-[:RECOMMENDATION]->(Pulseman),
+	(Adventure)-[:RECOMMENDATION]->(JPJ)
