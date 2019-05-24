@@ -17,13 +17,13 @@ code_3 = db.nodes.create(name="Andres", age="20", username="LoboAnima", password
 #Just some code so that the program doesn't crash on launch
 
 games = db.labels.create("Games")
-j1 = db.nodes.create(title="The Last of Us", price = 9.99, genre="Action")
-j2 = db.nodes.create(title="Super Mario Bros", price= 0.99, genre="Arcade")
-j3 = db.nodes.create(title="Pac man", price= 0.99, genre="Arcade")
-j4 = db.nodes.create(title="Super Mario Sunshine", price= 4.99, genre="Platformer")
-j5 = db.nodes.create(title="Halo", price=49.99, genre="Action")
-j6 = db.nodes.create(title="Sonic", price=9.99, genre="Platformer")
-j7 = db.nodes.create(title="Dark Souls", price=59.99, genre="F you")
+j1 = db.nodes.create(title="The Last of Us", price = "9.99", genre="Action")
+j2 = db.nodes.create(title="Super Mario Bros", price= "0.99", genre="Arcade")
+j3 = db.nodes.create(title="Pac man", price= "0.99", genre="Arcade")
+j4 = db.nodes.create(title="Super Mario Sunshine", price= "4.99", genre="Platformer")
+j5 = db.nodes.create(title="Halo", price="49.99", genre="Action")
+j6 = db.nodes.create(title="Sonic", price="9.99", genre="Platformer")
+j7 = db.nodes.create(title="Dark Souls", price="59.99", genre="F you")
 
 
 games.add(j1, j2, j3, j4, j5, j6, j7)
