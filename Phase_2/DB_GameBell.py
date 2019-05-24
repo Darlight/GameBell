@@ -4,9 +4,11 @@ Seccion
 DB_GameBell
 """
 from neo4j import GraphDatabase, basic_auth
-from neo4jrestclient import client
+from neo4jrestclient.client import GraphDatabase
 
+gdb = GraphDatabase()
 
+"""
 class DB_GameBell(object):
 
     def __init__(self):
@@ -37,10 +39,10 @@ class DB_GameBell(object):
         self.person.add(self._driver.nodes.create(name=name, age= age , email = email, password = password))
         return "Done creating a new username in the database. \n"
 
-    #key: it receives a key or a reference that the node has
-    #value: it recives de value of the reference key.
-    def delete_Person(self,key,value):
-        result = "MATCH (a:Person)\nWHERE a." + key + "= $value\nDETACH DELETE (a)"
+
+    #name: it receives the value of the reference key.
+    def delete_Person(self,value):
+        result = "MATCH (a:Person)\nWHERE a.name= $value\nDETACH DELETE (a)"
         with self._driver.session() as session:
             session.write_transaction(self._delete,result,value)
 
@@ -65,29 +67,6 @@ class DB_GameBell(object):
         with self._driver.session() as session:
             return session.write_transaction(self._Default, result)
 
-def game_Recommendation(self):
+    def game_Recommendation(self):
         return "hello"
-
-    @staticmethod
-    def _Default(tx, result):
-        return tx.run(result)
-
-    @staticmethod
-    def _getNodes(tx, result, value):
-        return tx.run(result, value=value)
-
-    @staticmethod
-    def _getNode(tx, result, value):
-        return tx.run(result, value=value)
-
-    @staticmethod
-    def _upgrade(tx, result, value, newValue):
-        result = tx.run(result, value=value, newValue=newValue)
-
-    @staticmethod
-    def _deleteLink(tx, result, variable1, variable2):
-        result = tx.run(result, variable1=variable1, variable2=variable2)
-
-    @staticmethod
-    def _delete(tx, result, value):
-        result = tx.run(result, value=value)
+"""
