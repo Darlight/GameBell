@@ -7,14 +7,18 @@ DB_GameBell
 from neo4jrestclient.client import GraphDatabase
 from neo4jrestclient import client
 
+#Uses the neo4j commands to create easily nodes, connections and some functions require cypher if you need
+#a recommendation for a game.
 def add_User(db, name, age, email, password):
+    #Creates a new person node
     Person = db.nodes.create(name=name, age = age, email = email, password = password)
     try:
-    	Person.labels.add("User")
+    	Person.labels.add("Person")
     	print ("\nUser has been registered succesfully.\n")
     except Exception:
     	print("\nUser could not be added.\n")
 def add_Game(db, title, price, rating):
+    #Adds a new Game node
     Game = db.nodes.create(title=title,price= price, rating=rating)
     try:
     	Game.labels.add("Game")
@@ -23,6 +27,7 @@ def add_Game(db, title, price, rating):
     	print("\nGame could not be added.")
 def create_PersonConnection(user1,user2):
     try:
+        #Creates a connection between 2 persons
     	user1.relationships.create("KNOWS",user2)
     	return "Database has been updated. \n"
     except Exception:
@@ -30,6 +35,7 @@ def create_PersonConnection(user1,user2):
     	print("-------------Couldn't add user to the Database------------")
     	print("----------------------------------------------------------")
 def check_Prices(db, price, client):
+    #Checks all prices
     q = "Match(g: Game) WHERE g.price=" +price+" \n RETURN g"
     result = db.query(q,returns=(client.Node,float,client.Node))
     try:
@@ -42,6 +48,7 @@ def check_Prices(db, price, client):
     	print("----------------------------------------------------------")
 def get_User(db, username, client):
 	users = []
+    #Finds all users
 	q = 'MATCH(p: Person) WHERE p.name="'+username+'" RETURN p'
 	result = db.query(q, returns=(client.Node, str, client.Node))
 	try:
@@ -61,6 +68,7 @@ def get_User(db, username, client):
 	
 
 def check_Rating(db, rating, client):
+    #Checks all rating of the game nodes
     q = 'MATCH (g: Game) WHERE g.rating="' + rating + '" RETURN g'
     result = db.query(q, returns=(client.Node, str, client.Node))
     try:
@@ -73,6 +81,7 @@ def check_Rating(db, rating, client):
     	print("----------------------------------------------------------")
 
 def recommendGame(db, price, rating):
+    #Reccomends a game via the price and rating in all of the Database
     q = 'MATCH (g: Game) WHERE g.price="'+price+'" RETURN g'
     result = db.query(q, returns=(client.Node, str, client.Node))
     games = []
