@@ -1,6 +1,6 @@
-from neo4restclient.client import GraphDatabase
+from neo4jrestclient.client import GraphDatabase
 from neo4jrestclient import client
-from program_methods import *
+from DB_GameBell import *
 
 
 db = GraphDatabase("http://localhost:7474", username= "neo4j", password="12345")
@@ -17,28 +17,28 @@ code_3 = db.nodes.create(name="Andres", age="20", username="LoboAnima", password
 #Just some code so that the program doesn't crash on launch
 
 games = db.labels.create("Games")
-j1 = db.nodes.create(title="The Last of Us", price = "9.99", genre="Action")
-j2 = db.nodes.create(title="Super Mario Bros", price= "0.99", genre="Arcade")
-j3 = db.nodes.create(title="Pac man", price= "0.99", genre="Arcade")
-j4 = db.nodes.create(title="Super Mario Sunshine", price= "4.99", genre="Platformer")
-j5 = db.nodes.create(title="Halo", price="49.99", genre="Action")
-j6 = db.nodes.create(title="Sonic", price="9.99", genre="Platformer")
-j7 = db.nodes.create(title="Dark Souls", price="59.99", genre="F you")
+j1 = db.nodes.create(title="The Last of Us", price = "9.99", genre="Action", rating="5")
+j2 = db.nodes.create(title="Super Mario Bros", price= "0.99", genre="Arcade", rating="4")
+j3 = db.nodes.create(title="Pac man", price= "0.99", genre="Arcade", rating="4")
+j4 = db.nodes.create(title="Super Mario Sunshine", price= "4.99", genre="Platformer", rating="5")
+j5 = db.nodes.create(title="Halo", price="49.99", genre="Action", rating="5")
+j6 = db.nodes.create(title="Sonic", price="9.99", genre="Platformer", rating="3")
+j7 = db.nodes.create(title="Dark Souls", price="59.99", genre="F you", rating="5")
 
 
 games.add(j1, j2, j3, j4, j5, j6, j7)
 
 #Relationships using prices
-j1.relationships.create("Under 10", j2)
-j1.relationships.create("Under 10", j3)
-j1.relationships.create("Under 10", j4)
-j1.relationships.create("Under 10", j6)
-j2.relationships.create("Under 10", j3)
-j2.relationships.create("Under 10", j4)
-j2.relationships.create("Under 10", j6)
-j3.relationships.create("Under 10", j4)
-j3.relationships.create("Under 10", j6)
-j6.relationships.create("Full price", j7)
+j1.relationships.create("Under10", j2)
+j1.relationships.create("Under10", j3)
+j1.relationships.create("Under10", j4)
+j1.relationships.create("Under10", j6)
+j2.relationships.create("Under10", j3)
+j2.relationships.create("Under10", j4)
+j2.relationships.create("Under10", j6)
+j3.relationships.create("Under10", j4)
+j3.relationships.create("Under10", j6)
+j6.relationships.create("Fullprice", j7)
 
 #Relationships using genre
 j1.relationships.create("Action", j5)
@@ -61,27 +61,28 @@ while status:
 	elif option == '2':
 		title = input("Please input a title \n>>> ")
 		price = float(input("Please input a price: \n>>> "))
-		genre = input("Please input a genre \n>>> ")
-		add_Game(db, title, price, genre)
+		rating = input("Add a rating: \n>>> ")
+		add_Game(db, title, price, rating)
 	elif option == '3':
-		x = True
+		print("Not implemented yet")
+		"""x = True
 		while x:
-			price = input("Please input a price range (Under 10/ Full Price): \n>>> ")
-			if price.upper() == 'UNDER 10' or price.upper() == 'FULL PRICE':
-				data_to_print = checkPrice(db, price, client)
+			price = input("Please input a price range (Under10/ FullPrice): \n>>> ")
+			if price.upper() == 'UNDER10' or price.upper() == 'FULLPRICE':
+				data_to_print = check_Prices(db, price, client)
 				print(data_to_print)
 				x = False
 			else:
-				print("Please try again")
+				print("Please try again")"""
 	elif option == '4':
-		genre_given = input("Please input the genre needed. A good example would be 'Action,' for example. \n>>> ")
-		genre_given = genre_given.capitalize()
-		checkType(db, genre_given)
+		rating = input("What rating do you wish to have? (1 - 5) \n>>> ")
+		check_Rating(db, rating, client)
 	elif option == '5':
 		genre_given = input("What like of genre would you like to have recommended? \n>>> ")
-		price_given = input("What about the price? (Under 10/ Full price) \n>>> ")
-		recommendGame(db, genre_given, price_given, client)
+		price_given = input("What about the price?  \n>>> ")
+		rating = input("Rating? \n>>> ")
+		recommendGame(db, price_given, rating)
 	elif option == '6':
-		menu = False
+		status = False
 	else:
 		print("Option not recognized. Please, try again.\n\n")
