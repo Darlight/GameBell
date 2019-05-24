@@ -66,7 +66,36 @@ class DB_GameBell(object):
         result = "MATCH (a:Company)\nRETURN a"
         with self._driver.session() as session:
             return session.write_transaction(self._Default, result)
+            def game_Recommendation(self):
+                return "hello"
+
 
     def game_Recommendation(self):
         return "hello"
+"""
+"""
+
+            @staticmethod
+            def _Default(tx, result):
+                return tx.run(result)
+
+            @staticmethod
+            def _getNodes(tx, result, value):
+                return tx.run(result, value=value)
+
+            @staticmethod
+            def _getNode(tx, result, value):
+                return tx.run(result, value=value)
+
+            @staticmethod
+            def _upgrade(tx, result, value, newValue):
+                result = tx.run(result, value=value, newValue=newValue)
+
+            @staticmethod
+            def _deleteLink(tx, result, variable1, variable2):
+                result = tx.run(result, variable1=variable1, variable2=variable2)
+
+            @staticmethod
+            def _delete(tx, result, value):
+                result = tx.run(result, value=value)
 """
