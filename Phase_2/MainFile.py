@@ -67,4 +67,21 @@ while status:
 		x = True
 		while x:
 			price = input("Please input a price range (Under 10/ Full Price): \n>>> ")
-			
+			if price.upper() == 'UNDER 10' or price.upper() == 'FULL PRICE':
+				data_to_print = checkPrice(db, price, client)
+				print(data_to_print)
+				x = False
+			else:
+				print("Please try again")
+	elif option == '4':
+		genre_given = input("Please input the genre needed. A good example would be 'Action,' for example. \n>>> ")
+		genre_given = genre_given.capitalize()
+		checkType(db, genre_given)
+	elif option == '5':
+		genre_given = input("What like of genre would you like to have recommended? \n>>> ")
+		price_given = input("What about the price? (Under 10/ Full price) \n>>> ")
+		recommendGame(db, genre_given, price_given, client)
+	elif option == '6':
+		menu = False
+	else:
+		print("Option not recognized. Please, try again.\n\n")
